@@ -5,10 +5,6 @@ import org.example.model.Session;
 import java.io.*;
 import com.google.gson.Gson;
 
-
-
-import java.io.*;
-
 public class SerializationExercises {
 
 	public static class Exercise1 {

@@ -81,7 +81,12 @@ Deserialice los objetos de los archivos binarios creados en el ejercicio 2.
 	public static class Exercise3 {
 
 		public static void main(String[] args) {
-
+			try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("movie1.dat"))) {
+				Movie movie1 = (Movie) objectInputStream.readObject();
+				// Handle movie1 object as needed
+			} catch (IOException | ClassNotFoundException e) {
+				e.printStackTrace();
+			}
 
 		}
 	}
